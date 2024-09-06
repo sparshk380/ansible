@@ -1,0 +1,19 @@
+---
+- name: Create test.txt in /home/ubuntu
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Create an empty test.txt file in /home/ubuntu
+      file:
+        path: /home/ubuntu/test.txt
+        state: touch
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
+      register: file_creation
+
+    - name: Confirm that test.txt was created
+      debug:
+        msg: "test.txt file has been created in /home/ubuntu"
+      when: file_creation is changed

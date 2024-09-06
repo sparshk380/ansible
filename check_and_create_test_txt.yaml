@@ -1,0 +1,24 @@
+---
+- name: Check if test.txt exists and create it if not
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Check if test.txt exists in /home/ubuntu
+      stat:
+        path: /home/ubuntu/test.txt
+      register: file_check
+
+    - name: Print message if file exists
+      debug:
+        msg: "File test.txt exists in /home/ubuntu"
+      when: file_check.stat.exists
+
+    - name: Print message if file does not exist
+      debug:
+        msg: "No file found with the name test.txt"
+      when: not file_check.stat.exists
+
+    - name: Trigger second playbook to create test.txt if not found
+      include_playbook: create_test_txt.yml
+      when: not file_check.stat.exists
