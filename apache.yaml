@@ -27,3 +27,7 @@
       apt:
         name: zsh
         state: present
+
+    - name: Print message
+      debug:
+        msg: "Zsh is present"
