@@ -18,3 +18,7 @@
         name: apache2
         state: started
         enabled: yes
+
+    - name: To print the message
+      debug:
+        msg: "Apache is successfully installed on EC2 machine."
