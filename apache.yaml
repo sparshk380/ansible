@@ -31,3 +31,7 @@
     - name: Print message
       debug:
         msg: "Zsh is present"
+
+    - name: Print the message again
+      debug:
+        msg: "ZSH IS PRESENT!!!!!"
