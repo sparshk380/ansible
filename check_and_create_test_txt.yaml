@@ -17,7 +17,3 @@
       debug:
         msg: "No file found with the name test.txt"
       when: not file_check.stat.exists
-
-    - name: Include second playbook to create test.txt if not found
-      ansible.builtin.include_tasks: create_test_txt.yml
-      when: not file_check.stat.exists
