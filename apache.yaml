@@ -22,3 +22,8 @@
     - name: To print the message
       debug:
         msg: "Apache is successfully installed on EC2 machine."
+
+    - name: Install zsh shell
+      apt:
+        name: zsh
+        state: present
