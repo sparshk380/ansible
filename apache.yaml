@@ -40,3 +40,7 @@
       apt:
         name: neofetch
         state: present
+
+    - name: Print message
+      debug:
+        msg: "Neofetch is installed!"
