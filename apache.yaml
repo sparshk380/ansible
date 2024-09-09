@@ -44,3 +44,12 @@
     - name: Print message
       debug:
         msg: "Neofetch is installed!"
+
+    - name: Uninstall zsh
+      apt:
+        name: zsh
+        state: absent
+
+    - name: Print the message
+      debug:
+        msg: "ZSH is successfully uninstalled"
