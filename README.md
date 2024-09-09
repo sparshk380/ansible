@@ -262,7 +262,7 @@ A Smart Inventory is a collection of hosts defined by a stored search that can b
 
 2. Instance Groups - Instance groups in Ansible Automation Platform, when creating a smart inventory, determine which execution nodes will run jobs using that inventory, allowing for targeted job execution and load balancing across specific sets of AAP nodes.
 
-3. Variables - Variables Variable definitions and values to be applied to all hosts in this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two.
+3. Variables - Variable definitions and values to be applied to all hosts in this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two.
 
 ## Constructed Inventory
 
