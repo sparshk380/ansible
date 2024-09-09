@@ -35,3 +35,8 @@
     - name: Print the message again
       debug:
         msg: "ZSH IS PRESENT!!!!!"
+
+    - name: Install neofetch
+      apt:
+        name: neofetch
+        state: present
