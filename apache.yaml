@@ -1,6 +1,5 @@
 ---
 - name: Install Apache on Ubuntu
-  gather_facts: yes
   hosts: all
   become: yes
   tasks:
@@ -55,7 +54,5 @@
       debug:
         msg: "ZSH is successfully uninstalled"
 
-    - name: Display Gathered Facts
-      debug:
-        var: ansible_facts
+
     
