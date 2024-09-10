@@ -1,6 +1,6 @@
 ---
 - name: Install Apache on Ubuntu
-  # gather_facts: false
+  gather_facts: yes
   hosts: all
   become: yes
   tasks:
@@ -57,5 +57,7 @@
 
     # - name: Clear gathered facts from all currently targeted hosts
     #   meta: clear_facts
-
+    - name: Display Gathered Facts
+      debug:
+        var: ansible_facts
     
