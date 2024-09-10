@@ -1,5 +1,6 @@
 ---
 - name: Install Apache on Ubuntu
+  gather_facts: false
   hosts: all
   become: yes
   tasks:
@@ -53,5 +54,8 @@
     - name: Print the message
       debug:
         msg: "ZSH is successfully uninstalled"
+
+    - name: Clear gathered facts from all currently targeted hosts
+      meta: clear_facts
 
     
