@@ -1,7 +1,10 @@
 ---
-- name: Echo Jenkins Username
+- name: Access Jenkins Variables
   hosts: all
   tasks:
-    - name: Display Jenkins Username
+    - name: Print Jenkins Variables
       debug:
-        msg: "Jenkins Username is: {{ jenkins_username }}"
+        msg: |
+          Jenkins Token: {{ jenkins_token }}
+          Jenkins Username: {{ jenkins_username }}
+          Jenkins Build URL: {{ jenkins_build_url }}
