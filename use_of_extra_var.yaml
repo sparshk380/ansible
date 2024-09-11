@@ -1,0 +1,7 @@
+---
+- name: Echo Jenkins Username
+  hosts: all
+  tasks:
+    - name: Display Jenkins Username
+      debug:
+        msg: "Jenkins Username is: {{ jenkins_username }}"
