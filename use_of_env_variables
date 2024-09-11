@@ -1,0 +1,10 @@
+---
+- name: Access Jenkins Variables
+  hosts: all
+  tasks:
+    - name: Print Jenkins Variables
+      debug:
+        msg: |
+          Jenkins Token: {{ lookup('env', 'JENKINS_TOKEN') }}
+          Jenkins Username: {{ lookup('env', 'JENKINS_USERNAME') }}
+          Jenkins Build URL: {{ lookup('env', 'JENKINS_BUILD_URL') }}
